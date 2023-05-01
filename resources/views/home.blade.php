@@ -1,28 +1,5 @@
 @extends('layouts.main')
 @section('content')
-<body>
-    <nav class="navbar navbar-expand-lg  ftco-navbar-light">
-        <div class="container-xl">
-            <a class="navbar-brand align-items-center" href="index.html">
-                Love<small>Care</small>
-                <span>Charity Theme</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="causes.html">Causes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <section class="hero-wrap rellax" data-rellax-speed="-5" data-rellax-min="-120" data-rellax-max="0"
         style="background-image: url('images/bg_1.jpg');">
         <div class="overlay"></div>
@@ -115,15 +92,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="submit" value="Donate Now"
-                                        class="btn btn-primary py-3 px-4 rounded">
+                                    <input type="submit" value="Donate Now" class="btn btn-primary py-3 px-4 rounded">
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-7 heading-section d-flex align-items-center" data-aos="fade-up"
-                    data-aos-delay="200" data-aos-duration="1000">
+                <div class="col-md-7 heading-section d-flex align-items-center" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="1000">
                     <div class="mt-0 about-wrap">
                         <span class="subheading">Welcome to Lovecare Charity</span>
                         <h2 class="mb-4">We Help Thousands of Children to Get Their Education</h2>
@@ -623,8 +599,8 @@
                     <div class="img img-2 w-100" style="background-image: url(images/about.jpg);">
                     </div>
                 </div>
-                <div class="col-md-6 heading-section d-flex align-items-center" data-aos="fade-up"
-                    data-aos-delay="200" data-aos-duration="1000">
+                <div class="col-md-6 heading-section d-flex align-items-center" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="1000">
                     <div class="mt-0 my-lg-5 py-5">
                         <span class="subheading">Welcome to LoveCare Non-Profit Charity</span>
                         <h2 class="mb-4">Do You Care Our Children?</h2>
@@ -658,8 +634,8 @@
                         </a>
                         <div class="text text-center">
                             <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Feb. 22, 2021</span> <span><a
-                                        href="#"><i class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
+                                        class="fa fa-calendar me-1"></i>Feb. 22, 2021</span> <span><a href="#"><i
+                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
                             <h3 class="heading mb-3"><a href="#">Give Hope to the People Need Most</a></h3>
                             <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
                                 language ocean.</p>
@@ -676,8 +652,8 @@
                         </a>
                         <div class="text text-center">
                             <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Feb. 22, 2021</span> <span><a
-                                        href="#"><i class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
+                                        class="fa fa-calendar me-1"></i>Feb. 22, 2021</span> <span><a href="#"><i
+                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
                             <h3 class="heading mb-3"><a href="#">Give Hope to the People Need Most</a></h3>
                             <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
                                 language ocean.</p>
@@ -694,8 +670,8 @@
                         </a>
                         <div class="text text-center">
                             <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Feb. 22, 2021</span> <span><a
-                                        href="#"><i class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
+                                        class="fa fa-calendar me-1"></i>Feb. 22, 2021</span> <span><a href="#"><i
+                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
                             <h3 class="heading mb-3"><a href="#">Give Hope to the People Need Most</a></h3>
                             <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
                                 language ocean.</p>
