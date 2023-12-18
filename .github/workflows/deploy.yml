@@ -1,10 +1,24 @@
-name: Build & Deploy
+name: Deploy App
+
+# Trigger deployment only on push to master branch
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   deploy:
+    name: Deploy to Ocean on master branch push
     runs-on: ubuntu-latest
+
     steps:
-            echo 'Deployment successful to digital ocean'
+      - name: Checkout the files
+        uses: actions/checkout@v2
+
+      - name: Deploy to EC2
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          TARGET: /var/www/
