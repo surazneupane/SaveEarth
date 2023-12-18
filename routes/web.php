@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,11 @@ Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('blog/{id}', [HomeController::class, 'showBlog'])->name('showblog');
 Route::get('causes', [HomeController::class, 'causes'])->name('causes');
 Route::get('/contactus', [HomeController::class, 'contactUs'])->name('contactus');
+
+
+// admins
+Route::any('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::group(['middleware' => 'auth'], function () {
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
