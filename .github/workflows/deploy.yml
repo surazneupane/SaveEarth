@@ -12,14 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
-       - name: Install Node Dependiencies
-         with:
+      - name: Install Node Dependiencies
+        with:
           node-version: '18.13.0'
-          -run: npm install
-          -run: npm run build
+      - run: npm install
+      - run: npm run build
 
 
       - name: Deploy to Digital Ocean
