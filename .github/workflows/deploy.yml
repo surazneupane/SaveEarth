@@ -15,10 +15,18 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
 
-      - name: Deploy to EC2
+      - name: Deploy to Digital Ocean
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           TARGET: /var/www/test/
+
+      - name: Install Dependencies
+         run:  composer install
+         run:  npm install
+         run: npm run build
+         run: php artisan migrate --force
+         run:  php artisan db:seed
+
