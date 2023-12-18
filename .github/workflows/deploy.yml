@@ -13,7 +13,14 @@ jobs:
 
     steps:
       - name: Checkout the files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+       - name: Install Node Dependiencies
+         with:
+          node-version: '18.13.0'
+          -run: npm install
+          -run: npm run build
+
 
       - name: Deploy to Digital Ocean
         uses: easingthemes/ssh-deploy@main
@@ -23,10 +30,5 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           TARGET: /var/www/test/
 
-      - name: Install Dependencies
-         run:  composer install
-         run:  npm install
-         run: npm run build
-         run: php artisan migrate --force
-         run:  php artisan db:seed
+
 
